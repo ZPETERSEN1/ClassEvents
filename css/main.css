@@ -110,13 +110,13 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
-		color: #37c0fb;
+		color: #004080 ;
 		text-decoration: none;
 		border-bottom: dotted 1px;
 	}
 
 		a:hover {
-			color: #37c0fb;
+			color: #004080 ;
 			border-bottom-color: transparent;
 		}
 
@@ -2031,7 +2031,7 @@ input, select, textarea {
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		textarea:focus {
-			border-color: #37c0fb;
+			border-color: #004080 ;
 		}
 
 	input[type="text"],
@@ -2152,7 +2152,7 @@ input, select, textarea {
 		.icon.major {
 			text-align: center;
 			cursor: default;
-			background-color: #37c0fb;
+			background-color: #004080 ;
 			background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
@@ -2420,7 +2420,7 @@ input, select, textarea {
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 		background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-		background-color: #37c0fb;
+		background-color: #004080 ;
 		border-radius: 5px;
 		border: 0;
 		color: #fff;
@@ -2440,7 +2440,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #50c8fc;
+			background-color: #004ea2;
 			color: #fff !important;
 		}
 
@@ -2570,7 +2570,7 @@ input, select, textarea {
 			display: block;
 			width: 100%;
 			height: 0.75em;
-			background-color: #37c0fb;
+			background-color: #004080 ;
 			background-image: url("images/bg01.png");
 		}
 
@@ -2617,7 +2617,7 @@ input, select, textarea {
 						bottom: -0.5em;
 						left: 50%;
 						margin-left: -0.375em;
-						background-color: #37c0fb;
+						background-color: #004080 ;
 						background-image: url("images/bg01.png");
 					}
 
@@ -2679,7 +2679,7 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background-image: url("../images/catering-banner.png");
+		background-image: url("../../images/catering-banner.png");
 		background-position: center center;
 		background-size: cover;
 		height: 28em;
@@ -2727,7 +2727,7 @@ input, select, textarea {
 /* Wrapper */
 
 	.wrapper {
-		padding: 5em 0 3em 0;
+		padding: 2em 0 2em 0;
 	}
 
 		.wrapper.style1 {
@@ -2743,7 +2743,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #37c0fb;
+			background-color: #004080 ;
 			background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
@@ -2757,15 +2757,87 @@ input, select, textarea {
 			}
 
 				.wrapper.style3 .button:hover {
-					color: #37c0fb !important;
+					color: #004080  !important;
 				}
 
+		/*About */
+		.aboutContainer{
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.aboutImg img{
+			max-width:450px;
+		}
+
+		.aboutText p{
+			max-width:630px;
+		}
+		/* Testimonial */
+
+		.wrapper.style2 h2{
+			font-size: 2.5em;
+			margin-bottom: 30px;
+		}
+
+		.userRatingCon{
+			max-width: 600px;
+			margin: 0 30px 0 0px;
+		}
+
+		.fa-star.checked.checked {
+			color: orange;
+		  }
+
+		.profile{
+			margin-right: 30px;
+		}
+
+		  .profile img{
+			max-width: 100px;
+		  }
+
+		.userRatingCon .content p{
+			/*font-weight: bold;*/
+		}
+
+		.userRatingCon .content h5{
+			margin-bottom: 0;
+		}
+
+		/* Services */
+		.servicesWrapper{
+			background-color: #000000;
+		}
+		.box.highlight{
+			transition: 1s;
+		}
+		
+
+		.servicesWrapper p, .servicesWrapper h3{
+			color: #ffffff;
+		}
+
+		.servicesWrapper h2{
+			color: #ffffff;
+			font-size: 2.5em;
+			margin-bottom: 50px;
+			text-align: center;
+		}
 /* CTA */
 
 	#cta {
 		text-align: center;
 		padding: 3.5em 0;
+		background-image: url("../../images/contact-form.jpg");
 	}
+	
+	#cta h2{
+		text-align: left;
+		font-size: 2.5em;
+		margin-bottom: 20px;
+	}
+
 
 		#cta header h2 {
 			display: inline-block;
@@ -2781,7 +2853,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		padding: 4em 0 8em 0;
+		padding: 20px 0;
 	}
 
 		#footer a {
@@ -2790,7 +2862,7 @@ input, select, textarea {
 		}
 
 			#footer a:hover {
-				color: #37c0fb;
+				color: #004080 ;
 				border-bottom-color: transparent;
 			}
 
@@ -2798,22 +2870,39 @@ input, select, textarea {
 			margin-bottom: 4em;
 		}
 
+
+
 		#footer .icons {
 			text-align: center;
 			margin: 0;
+			align-items: center;
+			justify-content:center;
 		}
 
 			#footer .icons a {
 				color: #999;
+				margin:0 12px;
 			}
 
-				#footer .icons a:hover {
-					color: #474747;
+			#footer .icons .fa-linkedin-in:hover {
+				color: #004ea2;
+			}
+
+				#footer .icons .fa-google:hover {
+					color: #c10303;
+				}
+
+				#footer .icons .fa-facebook-f:hover {
+					color: #004ea2;
+				}
+
+				#footer .icons .fa-instagram:hover {
+					color: #8a01be;
 				}
 
 		#footer .copyright {
 			color: #999;
-			margin-top: 1.5em;
+			margin-top: 10px;;
 			text-align: center;
 			font-size: 0.9em;
 		}
@@ -2994,11 +3083,44 @@ input, select, textarea {
 
 				#banner header h2 {
 					display: block;
+					font-size: 40px;
+					Margin-bottom: 15px;
 				}
 
 				#banner header .button {
 					margin: 0 0 0 0;
+					max-width:200px;
 				}
+
+				.wrapReview{
+					flex-wrap: wrap;
+				}
+
+				.aboutImg{
+					margin: 0 auto;
+					text-align: center;
+				}
+
+				.aboutImg img{
+					max-width: 90%;
+				}
+
+				.aboutText{
+					margin: auto;
+					max-width: 90%;
+				}
+
+				.aboutText p{
+					margin: 30px auto !important;
+				}
+
+
+				.wrapper.style2 h2{
+					margin-bottom: 20px;
+					text-align: center;
+				}
+
+
 
 		/* CTA */
 
@@ -3075,7 +3197,7 @@ input, select, textarea {
 				background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
 				height: 44px;
 				line-height: 44px;
-				box-shadow: 0 4px 0 0 #37c0fb;
+				box-shadow: 0 4px 0 0 #004080 ;
 			}
 
 				#titleBar .title {
@@ -3250,9 +3372,14 @@ input, select, textarea {
 				line-height: 1.35em;
 			}
 
-			header p {
+			#banner header p{
 				margin-top: -0.5em;
 				font-size: 1em;
+				display: none;
+			}
+
+			#banner header p:last-of-type{
+				display:block;
 			}
 
 			header.major {
@@ -3363,5 +3490,27 @@ input, select, textarea {
 				padding: 2em 20px;
 				text-align: left;
 			}
+
+	}
+
+	@media screen and (max-width: 400px) {
+		.userRatingCon{
+			flex-wrap: wrap;
+			margin: 20px 0;
+		} 
+
+		.testimonialTitle{
+			text-align: center;
+		}
+
+		.profile{
+			margin: 0 auto;
+		}
+
+		.userRatingCon .content{
+			text-align: center;
+		}
+
+		.
 
 	}
