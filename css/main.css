@@ -33,6 +33,18 @@ body {
 	line-height: 1;
 }
 
+
+.animate-on-scroll {
+    opacity: 0; /* Hidden by default */
+    transform: translateY(50px); /* Slightly move down */
+    transition: all 0.5s ease; /* Smooth transition */
+}
+
+.animate-on-scroll.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -1939,7 +1951,7 @@ input, select, textarea {
 				}
 
 					.row.gtr-200 > * {
-						padding: 40px 0 0 40px;
+						padding: 10px 0 0 40px;
 					}
 
 					.row.gtr-200.gtr-uniform {
@@ -1969,6 +1981,20 @@ input, select, textarea {
 		padding-left:5px;
 		margin-bottom:25px;
 		max-width: 800px;
+	}
+
+
+	#banner.aboutUsBanner header p,
+	#banner.contactUsBanner header p,
+	#banner.aboutUsBanner header h2,
+	#banner.contactUsBanner header h2
+	 {
+		max-width: 1000px;
+		text-align:center;
+	}
+
+	.alignButton{
+		text-align: left;
 	}
 
 	header.major {
@@ -2679,12 +2705,28 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background-image: url("../images/catering-banner.png");
+		background-image: url("../../images/catering-banner.png");
 		background-position: center center;
 		background-size: cover;
 		height: 28em;
 		text-align: center;
 		position: relative;
+	}
+
+	#banner.contactUsBanner{
+		background-image: url("../../images/contact-us-banner.PNG");
+		height: 19em;
+		text-align:center;
+	}
+
+	#banner.aboutUsBanner{
+		background-image: url("../../images/banner-about.PNG");
+		height: 19em;
+		text-align:center;
+	}
+
+	#banner.aboutUsBanner header{
+		background: rgba(27, 27, 27, 0.6);
 	}
 
 		#banner header {
@@ -2697,6 +2739,14 @@ input, select, textarea {
 			background: rgba(27, 27, 27, 0.75);
 			color: #fff;
 			padding: 1.5em 4em;
+		}
+
+		.responsiveAboutImg{
+			max-width:600px;
+		}
+
+		.marginWhite{
+			margin-top: 260px;
 		}
 
 			#banner header h2 {
@@ -2734,6 +2784,11 @@ input, select, textarea {
 			background: #fff;
 		}
 
+		.wrapper.style2.aboutPage p,
+		.wrapper.style2.aboutPage h2{
+			color:#fff;
+		}
+
 		.wrapper.style2 {
 			background-color: #fff;
 			background-image: url("images/bg02.png"), url("images/bg03.png"), url("images/bg01.png");
@@ -2743,21 +2798,21 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #004080 ;
+			background-color: #e5e5e5 ;
 			background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
-			color: #fff;
+			color: #004080;
 		}
 
 			.wrapper.style3 .button {
-				background: #fff;
-				color: #474747;
+				background: #004080;
+				color: #fff;
 			}
 
 				.wrapper.style3 .button:hover {
-					color: #004080  !important;
+					color: #fff  !important;
 				}
 
 		/*About */
@@ -2768,6 +2823,10 @@ input, select, textarea {
 
 		.aboutImg img{
 			max-width:450px;
+		}
+
+		.aboutContainer .aboutText p{
+			max-width:800px;
 		}
 
 		.aboutText p{
@@ -2826,16 +2885,68 @@ input, select, textarea {
 		}
 /* CTA */
 
+   .contactInfoWrap{
+	padding: 10px 50px 30px;
+	background-color: #004080;
+	margin:0 20px;
+   }
+
+   .contactInfoWrap h4{
+    color: #fff;
+    font-size: 1.3em;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 5px;
+   }
+
+   .contactInfoWrap .icons{
+	margin-top:10px;
+   }
+
 	#cta {
 		text-align: center;
 		padding: 3.5em 0;
-		background-image: url("../images/contact-form.jpg");
+	}
+
+	.contactInfo{
+
+	}
+
+	.contactInfoWrap .icons a{
+		color:#fff;
+	}
+
+	#cta input[type="text"]:focus{
+		border: 2px solid #004080;
 	}
 	
 	#cta h2{
-		text-align: left;
+		text-align: center;
 		font-size: 2.5em;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
+		color: #004080;
+		font-weight: 900;
+		width: 330px;
+	}
+
+	#cta p{
+		color: #004080;
+		font-weight: bold;
+		text-align: center;
+		max-width: 800px;
+		margin-bottom: 24px;
+		margin: 0 auto 24px;
+	}
+
+	#cta hr{
+		border-top: solid 1px #000000;
+		border: 0;
+		margin-bottom: 1.5em;
+		width: 38%;
+		height: 2px;
+		background: #004080;
+		margin: 40px 0;
+		border: none;
 	}
 
 
@@ -2857,7 +2968,7 @@ input, select, textarea {
 	}
 
 		#footer a {
-			color: inherit;
+			color: #fff;
 			border-bottom-color: rgba(71, 71, 71, 0.25);
 		}
 
@@ -2872,36 +2983,37 @@ input, select, textarea {
 
 
 
-		#footer .icons {
+		.icons {
 			text-align: center;
-			margin: 0;
+			margin: 20px 0 0;
 			align-items: center;
 			justify-content:center;
 		}
 
-			#footer .icons a {
+			.icons a {
 				color: #999;
 				margin:0 12px;
+				border:none;
 			}
 
-			#footer .icons .fa-linkedin-in:hover {
+			.icons .fa-linkedin-in:hover {
 				color: #004ea2;
 			}
 
-				#footer .icons .fa-google:hover {
+				.icons .fa-google:hover {
 					color: #c10303;
 				}
 
-				#footer .icons .fa-facebook-f:hover {
+				.icons .fa-facebook-f:hover {
 					color: #004ea2;
 				}
 
-				#footer .icons .fa-instagram:hover {
+				.icons .fa-instagram:hover {
 					color: #8a01be;
 				}
 
-		#footer .copyright {
-			color: #999;
+		.copyright {
+			color: #fff;
 			margin-top: 10px;;
 			text-align: center;
 			font-size: 0.9em;
@@ -2925,6 +3037,21 @@ input, select, textarea {
 			}
 
 	}
+
+	@media screen and (max-width: 1600px) {
+	.aboutContainer .aboutText p{
+		max-width:630px;
+	}
+
+	.responsiveAboutImg{
+		max-width:550px;
+	}
+
+	
+	.marginWhite{
+		margin-top: 200px;
+	}
+}
 
 /* Normal */
 
@@ -3004,6 +3131,9 @@ input, select, textarea {
 				line-height: 1.5em;
 			}
 
+			.contactInfo .aboutImg img{
+				max-width:375px;
+			}
 	}
 
 /* Narrower */
@@ -3081,19 +3211,47 @@ input, select, textarea {
 				height: 20em;
 			}
 
+			#banner.aboutUsBanner{
+				height: 23em;
+			}
+			#banner.contactUsBanner{
+				height: 18em;
+			}
+
 				#banner header h2 {
 					display: block;
 					font-size: 40px;
 					Margin-bottom: 15px;
+					text-align:center;
+				}
+
+				#banner header p {
+					text-align: center;
+				}
+
+				.responsiveAboutImg{
+				max-width: 80%;
+				}
+
+				.marginWhite{
+					margin-top: 100px;
 				}
 
 				#banner header .button {
 					margin: 0 0 0 0;
-					max-width:200px;
+					max-width:250px;
 				}
 
 				.wrapReview{
 					flex-wrap: wrap;
+				}
+
+				.alignButton{
+					text-align: center;
+				}
+
+				.wrapReview.reverse{
+					flex-direction: column-reverse;
 				}
 
 				.aboutImg{
@@ -3120,7 +3278,32 @@ input, select, textarea {
 					text-align: center;
 				}
 
+				.contactInfoWrap{
+					width: 90%;
+    				margin: 18px auto;
+    				padding: 20px 12px;			
+				}
 
+				.contactInfo .aboutImg img{
+					max-width:100%;
+				}
+
+				.aboutContainer .contactInfoWrap .aboutText p{
+					text-align: left;
+					margin:10px 0 !important;
+				}
+
+				.contactWrapper{
+					padding: 2em 0 1px;
+				}
+
+				.contactWrapper .aboutText{
+					margin: auto;
+				}
+
+				.contactWrapper .aboutText p{
+					margin: 10px 0;
+				}
 
 		/* CTA */
 
@@ -3378,6 +3561,9 @@ input, select, textarea {
 				display: none;
 			}
 
+
+
+
 			#banner header p:last-of-type{
 				display:block;
 			}
@@ -3420,6 +3606,21 @@ input, select, textarea {
 
 	}
 
+	@media screen and (max-width: 600px) {
+	.responsiveAboutImg{
+		max-width: 95%;
+		}
+
+		.aboutContainer .aboutText p{
+			text-align:center;
+		}
+
+		.marginWhite{
+			margin-top:100px;
+		}
+	}
+
+
 /* Mobile (Portrait) */
 
 	@media screen and (max-width: 480px) {
@@ -3448,11 +3649,23 @@ input, select, textarea {
 				display: block;
 			}
 
+			#banner header .button{
+				max-width: 100%;
+			}
+
 		/* Box */
 
 			.box.highlight {
-				padding-left: calc(4em + 30px);
+				padding-left: 0px;
+				text-align: center;
 			}
+
+			.box.highlight i{
+				text-align: center;
+    			position: inherit;
+    			margin: 0px auto 20px;
+			}
+
 
 			.box.post .inner {
 				margin-left: calc(30% + 20px);
@@ -3465,7 +3678,7 @@ input, select, textarea {
 		/* Banner */
 
 			#banner {
-				height: 20em;
+				height: 16em;
 			}
 
 				#banner header {
@@ -3482,6 +3695,10 @@ input, select, textarea {
 
 			#cta {
 				padding: 20px;
+			}
+
+			#cta hr{
+				width:20%;
 			}
 
 		/* Footer */
