@@ -3,6 +3,33 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+$(document).ready(function() {
+    // Function to check if an element is in view
+    function checkVisibility() {
+        $('.animate-on-scroll').each(function() {
+            const elementTop = $(this).offset().top;
+            const elementBottom = elementTop + $(this).outerHeight();
+            const viewportTop = $(window).scrollTop();
+            const viewportBottom = viewportTop + $(window).height();
+
+            // Check if element is in view
+            if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                $(this).addClass('visible');
+            } else {
+                $(this).removeClass('visible'); // Optional: remove class when out of view
+            }
+        });
+    }
+
+    // Initial check
+    checkVisibility();
+
+    // Check visibility on scroll
+    $(window).on('scroll', function() {
+        checkVisibility();
+    });
+});
+
 
 (function($) {
 
