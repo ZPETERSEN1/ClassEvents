@@ -2714,7 +2714,7 @@ input, select, textarea {
 	}
 
 	#banner.contactUsBanner{
-		background-image: url("../images/contact-us-banner.PNG");
+		background-image: url("../images/contact-us-banner.png");
 		height: 19em;
 		text-align:center;
 	}
